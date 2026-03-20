@@ -1,0 +1,249 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #fcf5ee;
+  --foreground: #43334c;
+  --card: #ffffff;
+  --card-foreground: #43334c;
+  --popover: #ffffff;
+  --popover-foreground: #43334c;
+  --primary: #e83c91;
+  --primary-foreground: #ffffff;
+  --secondary: #ffc4c4;
+  --secondary-foreground: #43334c;
+  --muted: #f8f4ec;
+  --muted-foreground: #7a5f72;
+  --accent: #ffc4c4;
+  --accent-foreground: #e83c91;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --border: #edd8dc;
+  --input: #edd8dc;
+  --ring: #e83c91;
+  --chart-1: #e83c91;
+  --chart-2: #ff8fb7;
+  --chart-3: #43334c;
+  --chart-4: #ffc4c4;
+  --chart-5: #c4206a;
+  --sidebar: #f8f4ec;
+  --sidebar-foreground: #43334c;
+  --sidebar-primary: #e83c91;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #edd8dc;
+  --sidebar-accent-foreground: #e83c91;
+  --sidebar-border: #edd8dc;
+  --sidebar-ring: #e83c91;
+  --font-sans: "Geist", ui-sans-serif, sans-serif, system-ui;
+  --font-serif: "Fraunces", ui-serif, serif;
+  --font-mono: Geist Mono, ui-monospace, monospace;
+  --radius: 0.65rem;
+  --shadow-x: 0px;
+  --shadow-y: 2px;
+  --shadow-blur: 15px;
+  --shadow-spread: 0px;
+  --shadow-opacity: 0.05;
+  --shadow-color: #000000;
+  --shadow-2xs: 0px 2px 15px 0px hsl(0 0% 0% / 0.03);
+  --shadow-xs: 0px 2px 15px 0px hsl(0 0% 0% / 0.03);
+  --shadow-sm:
+    0px 2px 15px 0px hsl(0 0% 0% / 0.05), 0px 1px 2px -1px hsl(0 0% 0% / 0.05);
+  --shadow:
+    0px 2px 15px 0px hsl(0 0% 0% / 0.05), 0px 1px 2px -1px hsl(0 0% 0% / 0.05);
+  --shadow-md:
+    0px 2px 15px 0px hsl(0 0% 0% / 0.05), 0px 2px 4px -1px hsl(0 0% 0% / 0.05);
+  --shadow-lg:
+    0px 2px 15px 0px hsl(0 0% 0% / 0.05), 0px 4px 6px -1px hsl(0 0% 0% / 0.05);
+  --shadow-xl:
+    0px 2px 15px 0px hsl(0 0% 0% / 0.05), 0px 8px 10px -1px hsl(0 0% 0% / 0.05);
+  --shadow-2xl: 0px 2px 15px 0px hsl(0 0% 0% / 0.13);
+  --tracking-normal: -0.015em;
+  --spacing: 0.25rem;
+  --background-rgb: 252 245 238;
+  --hover: rgba(0, 0, 0, 0.04);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #121212;
+    --background-rgb: 18 18 18;
+    --foreground: #e4e4e7;
+    --card: #1e1e1e;
+    --card-foreground: #e4e4e7;
+    --popover: #1e1e1e;
+    --popover-foreground: #e4e4e7;
+    --primary: #e83c91;
+    --primary-foreground: #ffffff;
+    --secondary: #27272a;
+    --secondary-foreground: #e4e4e7;
+    --muted: #27272a;
+    --muted-foreground: #a1a1aa;
+    --accent: #27272a;
+    --accent-foreground: #e4e4e7;
+    --destructive: #7f1d1d;
+    --destructive-foreground: #e4e4e7;
+    --border: #3f3f3f;
+    --input: #3f3f3f;
+    --ring: #e83c91;
+    --chart-1: #e83c91;
+    --chart-2: #ff8fb7;
+    --chart-3: #e4e4e7;
+    --chart-4: #ffc4c4;
+    --chart-5: #c4206a;
+    --sidebar: #121212;
+    --sidebar-foreground: #e4e4e7;
+    --sidebar-primary: #e83c91;
+    --sidebar-primary-foreground: #ffffff;
+    --sidebar-accent: #27272a;
+    --sidebar-accent-foreground: #e4e4e7;
+    --sidebar-border: #2d2d2d;
+    --sidebar-ring: #e83c91;
+    --shadow-x: 0px;
+    --shadow-y: 4px;
+    --shadow-blur: 25px;
+    --shadow-spread: 0px;
+    --shadow-opacity: 0.3;
+    --shadow-color: #000000;
+    --shadow-2xs: 0px 4px 25px 0px hsl(0 0% 0% / 0.15);
+    --shadow-xs: 0px 4px 25px 0px hsl(0 0% 0% / 0.15);
+    --shadow-sm:
+      0px 4px 25px 0px hsl(0 0% 0% / 0.3), 0px 1px 2px -1px hsl(0 0% 0% / 0.3);
+    --shadow:
+      0px 4px 25px 0px hsl(0 0% 0% / 0.3), 0px 1px 2px -1px hsl(0 0% 0% / 0.3);
+    --shadow-md:
+      0px 4px 25px 0px hsl(0 0% 0% / 0.3), 0px 2px 4px -1px hsl(0 0% 0% / 0.3);
+    --shadow-lg:
+      0px 4px 25px 0px hsl(0 0% 0% / 0.3), 0px 4px 6px -1px hsl(0 0% 0% / 0.3);
+    --shadow-xl:
+      0px 4px 25px 0px hsl(0 0% 0% / 0.3), 0px 8px 10px -1px hsl(0 0% 0% / 0.3);
+    --shadow-2xl: 0px 4px 25px 0px hsl(0 0% 0% / 0.75);
+    --hover: rgba(255, 255, 255, 0.06);
+  }
+}
+
+.dark {
+  --background: #121212;
+  --background-rgb: 18 18 18;
+  --foreground: #e4e4e7;
+  --card: #1e1e1e;
+  --card-foreground: #e4e4e7;
+  --popover: #1e1e1e;
+  --popover-foreground: #e4e4e7;
+  --primary: #e83c91;
+  --primary-foreground: #ffffff;
+  --secondary: #27272a;
+  --secondary-foreground: #e4e4e7;
+  --muted: #27272a;
+  --muted-foreground: #a1a1aa;
+  --accent: #27272a;
+  --accent-foreground: #e4e4e7;
+  --destructive: #7f1d1d;
+  --destructive-foreground: #e4e4e7;
+  --border: #262626;
+  --input: #262626;
+  --ring: #e83c91;
+  --chart-1: #e83c91;
+  --chart-2: #ff8fb7;
+  --chart-3: #e4e4e7;
+  --chart-4: #ffc4c4;
+  --chart-5: #c4206a;
+  --sidebar: #121212;
+  --sidebar-foreground: #e4e4e7;
+  --sidebar-primary: #e83c91;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #27272a;
+  --sidebar-accent-foreground: #e4e4e7;
+  --sidebar-border: #2d2d2d;
+  --sidebar-ring: #e83c91;
+  --font-sans: "Geist", ui-sans-serif, sans-serif, system-ui;
+  --font-serif: "Fraunces", ui-serif, serif;
+  --font-mono: Geist Mono, ui-monospace, monospace;
+  --radius: 0.65rem;
+  --shadow-x: 0px;
+  --shadow-y: 4px;
+  --shadow-blur: 25px;
+  --shadow-spread: 0px;
+  --shadow-opacity: 0.3;
+  --shadow-color: #000000;
+  --shadow-2xs: 0px 4px 25px 0px hsl(0 0% 0% / 0.15);
+  --shadow-xs: 0px 4px 25px 0px hsl(0 0% 0% / 0.15);
+  --shadow-sm:
+    0px 4px 25px 0px hsl(0 0% 0% / 0.3), 0px 1px 2px -1px hsl(0 0% 0% / 0.3);
+  --shadow:
+    0px 4px 25px 0px hsl(0 0% 0% / 0.3), 0px 1px 2px -1px hsl(0 0% 0% / 0.3);
+  --shadow-md:
+    0px 4px 25px 0px hsl(0 0% 0% / 0.3), 0px 2px 4px -1px hsl(0 0% 0% / 0.3);
+  --shadow-lg:
+    0px 4px 25px 0px hsl(0 0% 0% / 0.3), 0px 4px 6px -1px hsl(0 0% 0% / 0.3);
+  --shadow-xl:
+    0px 4px 25px 0px hsl(0 0% 0% / 0.3), 0px 8px 10px -1px hsl(0 0% 0% / 0.3);
+  --shadow-2xl: 0px 4px 25px 0px hsl(0 0% 0% / 0.75);
+  --hover: rgba(255, 255, 255, 0.06);
+}
+
+body {
+  letter-spacing: var(--tracking-normal);
+  background-color: var(--background);
+  color: var(--foreground);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Remove all native focus/highlight indicators */
+*,
+*:focus,
+*:focus-visible,
+*:focus-within {
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Suppress Tailwind focus-visible ring glow */
+*:focus-visible {
+  --tw-ring-shadow: 0 0 0 0 transparent !important;
+  --tw-ring-offset-shadow: 0 0 0 0 transparent !important;
+}
+
+/* Desktop: full-width sidebar layout handled by MainApp */
+/* Hide number input spin buttons */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Custom Scrollbars — applied globally */
+* {
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: transparent transparent; /* Firefox */
+}
+
+*::-webkit-scrollbar {
+  width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 10px;
+}
+
+*:hover {
+  scrollbar-color: var(--border) transparent; /* Firefox */
+}
+
+*:hover::-webkit-scrollbar-thumb {
+  background: var(--border);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: var(--muted-foreground);
+}
